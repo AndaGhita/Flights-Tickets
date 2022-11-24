@@ -21,7 +21,7 @@
 #include "Tickets_functions.hh"
 
 using namespace std;
-//try it works
+//try if it works
 
 int main(int argc , char **argv)
 {
