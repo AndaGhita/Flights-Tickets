@@ -1,12 +1,7 @@
 
-ticket : Flights.hh Bookings.hh Tickets_functions.hh Flights.cpp Bookings.cpp Ticket_functions.cpp main.cpp
-	g++ main.cpp Flights.cpp Bookings.cpp Ticket_functions.cpp -o ticket
+main : Flights.hh Bookings.hh Read_files.hh Tickets_functions.hh  Flights.cpp Bookings.cpp Read_files.cpp Ticket_functions.cpp main.cpp
+	g++ main.cpp Flights.cpp Bookings.cpp Read_files.cppTicket_functions.cpp -o ticket
 	
-check : ticket
-	./ticket -f flights.csv -b bookings.csv
+check : main
+	./main -f flights.csv -b bookings.csv
 
-dist : ticket
-	gzip ticket
-	
-distcheck : dist
-	gunzip ticket.gz
