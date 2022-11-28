@@ -21,19 +21,31 @@
 #include "Tickets_functions.hh"
 
 using namespace std;
-//try it works
+
 
 int main(int argc , char **argv)
 {
-    string flightfile = argv[2];
+    int option;
     FlighInformations myFlights;
-    myFlights.readFlightInformations(flightfile);
-
-    string bookingfile = argv[3];
     BookingsInformations myBookings;
-    myBookings.readBookingsInformations(bookingfile);
+    
+    while((option = getopt(argc, argv, "f:b") != -1)
+   {
+        
+    switch(option)
+    {
+    
+       case'f':
+               string flightfile = optarg;
+               myFlights.readFlightInformations(flightfile);
+               break;
+      case'b':
+               string bookingfile = optarg;
+               myBookings.readBookingsInformations(bookingfile);
+               break;
 
-
+    }
+   }
     createTickets(myFlights.getFlightList(), myBookings.getBookingsList());
    
 
