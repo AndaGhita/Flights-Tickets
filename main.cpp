@@ -29,7 +29,7 @@ int main(int argc , char **argv)
     FlighInformations myFlights;
     BookingsInformations myBookings;
     
-    while((option = getopt(argc, argv, "f:b") != -1))
+    while((option = getopt(argc, argv, "f:b")) != -1)
    {
         
     switch(option)
