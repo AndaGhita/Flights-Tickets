@@ -91,6 +91,7 @@
     
         else{
             std::cerr << "The file it's unable to open" << std::endl;
+            throw "THE FILE CAN'T OPEN";
         }
     }
 
@@ -155,6 +156,7 @@
         }
         else{
             std::cerr << "The file it's unable to open" << std::endl;
+            throw "THE FILE CAN'T OPEN";
         }
     }
    
