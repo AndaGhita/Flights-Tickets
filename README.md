@@ -8,7 +8,7 @@ Final assignment C/C++ 2022
 **Example running the program:**
 
 ```
-4a-tickets.exe flights.csv booking.csv
+.\ticket.cpp -f flights.csv -b booking.csv
 ```
 
 **Will produce the files:**
@@ -120,3 +120,4 @@ PASSENGER: Kalle Kula
 CLASS: first
 ROW:4 SEAT:24
 ```
+#This program use action for run and check
