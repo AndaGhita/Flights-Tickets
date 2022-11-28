@@ -25,6 +25,7 @@ using namespace std;
 
 int main(int argc , char **argv)
 {
+    try {
     int option;
     FlighInformations myFlights;
     BookingsInformations myBookings;
@@ -50,7 +51,11 @@ int main(int argc , char **argv)
    }
     createTickets(myFlights.getFlightList(), myBookings.getBookingsList());
    
-
+    } catch(const char *what){
+       
+        cerr <<"I could not open the file!" << what <<endl;
+    
+    }
    
     return 0;
 
