@@ -35,13 +35,15 @@ int main(int argc , char **argv)
     switch(option)
     {
     
-       case 'f':
+       case 'f':{
                char *flightfile = optarg;
                myFlights.readFlightInformations(flightfile);
+                }
                break;
-      case 'b':
+      case 'b':{
                char *bookingfile = optarg;
                myBookings.readBookingsInformations(bookingfile);
+               }
                break;
 
     }
