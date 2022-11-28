@@ -4,4 +4,5 @@ ticket : Flights.hh Bookings.hh Read_files.hh Tickets_functions.hh  Flights.cpp 
 	
 check : ticket
 	./ticket -f flights.csv -b bookings.csv
+	ls -l 
 
