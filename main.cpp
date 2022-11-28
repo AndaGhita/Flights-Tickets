@@ -26,20 +26,21 @@ using namespace std;
 int main(int argc , char **argv)
 {
     int option;
-    while((option = getopt(argc, argv, "f:b"))
+    FlighInformations myFlights;
+    BookingsInformations myBookings;
+    
+    while((option = getopt(argc, argv, "f:b") != -1)
    {
         
     switch(option)
     {
     
        case'f':
-               string flightfile = optionarg;
-               FlighInformations myFlights;
+               string flightfile = optarg;
                myFlights.readFlightInformations(flightfile);
                break;
       case'b':
-               string bookingfile = optionarg;
-               BookingsInformations myBookings;
+               string bookingfile = optarg;
                myBookings.readBookingsInformations(bookingfile);
                break;
 
